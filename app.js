@@ -32,10 +32,10 @@ app.post("/", (req, res) => {
     ],
   };
   const jsonData = JSON.stringify(data);
-  const url = "https://us14.api.mailchimp.com/3.0/lists/a1be7b5e54";
+  const url = "https://us14.api.mailchimp.com/3.0/lists/*******";
   const options = {
     method: "POST",
-    auth: "lakshay1:w7c2f3ffec87a484181168cbfd84e44dd-us14",
+    auth: "lakshay1:**************-us14",
   };
   const response = https.request(url, options, (response) => {
     if(response.statusCode === 200)
@@ -55,8 +55,6 @@ app.post("/", (req, res) => {
 app.post("/failure", (req, res) => {
     res.redirect("/");
 })
-// api key - 7c2f3ffec87a484181168cbfd84e44dd-us14
-// audience id - a1be7b5e54
 
 // for listening the server
 app.listen(process.env.PORT || 3000, () => {
